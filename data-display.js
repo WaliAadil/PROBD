@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const db = firebase.firestore(); // Reuse the already-initialized Firebase app
+
   const outputElement = document.getElementById("text-28");
 
   db.collection("test").doc("test1").get()
