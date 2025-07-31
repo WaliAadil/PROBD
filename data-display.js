@@ -3,6 +3,9 @@
 // Import the 'db' object from your firebase-config.js file
 import { db } from './firebase-config.js';
 
+
+console.log("Value of db in data-display.js:", db); // ADD THIS LINE
+
 // Now, let's pull your data!
 db.collection("test").doc("test1").get()
     .then((doc) => {
