@@ -26,7 +26,7 @@ onSnapshot(docRef, (docSnap) => {
         }
 
         if (mileageElement) {
-            mileageElement.innerText = "${mileage}mpg";
+            mileageElement.innerText = "${mileage}miles";
         }
     } else {
         console.log("Document 'test1' in collection 'test' no longer exists!");
