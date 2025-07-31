@@ -1,32 +1,17 @@
-// data-display.js
+document.addEventListener("DOMContentLoaded", () => {
+  const outputElement = document.getElementById("text-28");
 
-// Import the 'db' object from your firebase-config.js file
-import { db } from './firebase-config.js';
-
-
-console.log("Value of db in data-display.js:", db); // ADD THIS LINE
-
-// Now, let's pull your data!
-db.collection("test").doc("test1").get()
+  db.collection("test").doc("test1").get()
     .then((doc) => {
-        if (doc.exists) {
-            const data = doc.data();
-            console.log("Document data:", data);
-
-            const fuelLevel = data.fuelLevel;
-
-            const fuelLevelElement = document.getElementById("text-28");
-            if (fuelLevelElement) {
-                fuelLevelElement.innerText = fuelLevel;
-            }
-        } else {
-            console.log("No such document 'test1' in collection 'test'!");
-            const fuelLevelElement = document.getElementById("fuelLevelDisplay");
-            if (fuelLevelElement) fuelLevelElement.innerText = "Error: Data not found";
-        }
+      if (doc.exists) {
+        const fuelLevel = doc.data().fuelLevel;
+        outputElement.textContent = `Fuel Level: ${fuelLevel}`;
+      } else {
+        outputElement.textContent = "No such document found.";
+      }
     })
     .catch((error) => {
-        console.error("Error getting document:", error);
-        const fuelLevelElement = document.getElementById("fuelLevelDisplay");
-        if (fuelLevelElement) fuelLevelElement.innerText = "Error: Failed to load data";
+      console.error("Error fetching document:", error);
+      outputElement.textContent = "Error fetching data.";
     });
+});
