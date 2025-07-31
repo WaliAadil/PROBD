@@ -20,13 +20,13 @@ onSnapshot(docRef, (docSnap) => {
         const mileageElement = document.getElementById("text-23");
 
         if (targetElement) {
-            targetElement.innerText = fuelLevel;
+            targetElement.innerText = "${fuelLevel}%";
         } else {
             console.error("HTML element with ID 'text-28' not found!");
         }
 
         if (mileageElement) {
-            mileageElement.innerText = mileage;
+            mileageElement.innerText = "${mileage}mpg";
         }
     } else {
         console.log("Document 'test1' in collection 'test' no longer exists!");
