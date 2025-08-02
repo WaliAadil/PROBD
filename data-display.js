@@ -24,13 +24,13 @@ onSnapshot(docRef, (docSnap) => {
         const maintainanceElement = document.getElementById("text-33");
 
         if (targetElement) {
-            targetElement.innerText = fuelLevel;
+            targetElement.innerText = `${fuelLevel} %`;
         } else {
             console.error("HTML element with ID 'text-28' not found!");
         }
 
         if (mileageElement) {
-            mileageElement.innerText = mileage;
+            mileageElement.innerText = `${mileage} miles`;
         }
 
         if (conditionElement) {
