@@ -38,7 +38,14 @@ onSnapshot(docRef, (docSnap) => {
         }
 
         if (maintainanceElement) {
-            maintainanceElement.innerText = maintainance;
+            // If maintainance is a Firestore Timestamp object
+            let displayValue = maintainance;
+            if (maintainance && typeof maintainance.toDate === "function") {
+                const dateObj = maintainance.toDate();
+                // Format as MM/DD/YYYY (or customize as needed)
+                displayValue = dateObj.toLocaleDateString();
+            }
+            maintainanceElement.innerText = displayValue;
         }
         
     } else {
