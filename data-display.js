@@ -16,8 +16,12 @@ onSnapshot(docRef, (docSnap) => {
 
         const fuelLevel = data.fuelLevel;
         const mileage = data.mileage;
+        const condition = data.condition;
+        const maintainance = data.maintenance;
         const targetElement = document.getElementById("text-28");
         const mileageElement = document.getElementById("text-23");
+        const conditionElement = document.getElementById("text-18");
+        const maintainanceElement = document.getElementById("text-33");
 
         if (targetElement) {
             targetElement.innerText = fuelLevel;
@@ -28,6 +32,15 @@ onSnapshot(docRef, (docSnap) => {
         if (mileageElement) {
             mileageElement.innerText = mileage;
         }
+
+        if (conditionElement) {
+            conditionElement.innerText = condition;
+        }
+
+        if (maintainanceElement) {
+            maintainanceElement.innerText = maintainance;
+        }
+        
     } else {
         console.log("Document 'test1' in collection 'test' no longer exists!");
         const targetElement = document.getElementById("text-28");
