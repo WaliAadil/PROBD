@@ -22,7 +22,7 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firestore and export it
 export const db = getFirestore(app);
 
-// Initialize Analytics (optional, if you want to use it)
+// Initialize Analytics
 const analytics = getAnalytics(app);
 
 console.log("Firebase app initialized. Firestore DB instance available.");
