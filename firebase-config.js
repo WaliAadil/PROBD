@@ -4,7 +4,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
-import { getAI, getGenerativeModel, GoogleAIBackend } from "firebase/ai";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -25,13 +24,5 @@ export const db = getFirestore(app);
 
 // Initialize Analytics
 const analytics = getAnalytics(app);
-
-
-// Initialize the Gemini Developer API backend service
-const ai = getAI(firebaseApp, { backend: new GoogleAIBackend() });
-
-// Create a `GenerativeModel` instance with a model that supports your use case
-const model = getGenerativeModel(ai, { model: "gemini-2.5-flash" });
-
 
 console.log("Firebase app initialized. Firestore DB instance available.");
