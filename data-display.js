@@ -20,11 +20,13 @@ onSnapshot(docRef, (docSnap) => {
         const condition = data.condition;
         const maintainance = data.maintenance;
         const fuelEcon = data.economy;
+        const connection = data.connection;
         const targetElement = document.getElementById("text-28");
         const mileageElement = document.getElementById("text-23");
         const conditionElement = document.getElementById("text-18");
         const maintainanceElement = document.getElementById("text-33");
         const economyElement = document.getElementById("text-16");
+        const connectionElement = document.getElementById("text-24");
 
         if (targetElement) {
             targetElement.innerText = `${fuelLevel} %`;
@@ -52,6 +54,13 @@ onSnapshot(docRef, (docSnap) => {
                 displayValue = dateObj.toLocaleDateString();
             }
             maintainanceElement.innerText = displayValue;
+        }
+        if (connection) {
+            if (connection == true){
+            connectionElement.innerText = "Connected";
+            } else if (connection == false) {
+                connectionElement.innerText = "Disconnected";
+            }
         }
         
     } else {
