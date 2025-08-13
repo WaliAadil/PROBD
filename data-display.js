@@ -1,3 +1,4 @@
+console.log("data-display.js loaded!");
 // data-display.js
 
 import { db } from './firebase-config.js';
