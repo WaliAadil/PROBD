@@ -18,10 +18,12 @@ onSnapshot(docRef, (docSnap) => {
         const mileage = data.mileage;
         const condition = data.condition;
         const maintainance = data.maintenance;
+        const fuelEcon = data.economy;
         const targetElement = document.getElementById("text-28");
         const mileageElement = document.getElementById("text-23");
         const conditionElement = document.getElementById("text-18");
         const maintainanceElement = document.getElementById("text-33");
+        const economyElement = document.getElementById("text-16");
 
         if (targetElement) {
             targetElement.innerText = `${fuelLevel} %`;
@@ -35,6 +37,9 @@ onSnapshot(docRef, (docSnap) => {
 
         if (conditionElement) {
             conditionElement.innerText = condition;
+        }
+        if (economyElement){
+            economyElement.innerText = `${fuelEcon} mpg`;
         }
 
         if (maintainanceElement) {

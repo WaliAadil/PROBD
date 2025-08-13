@@ -8,29 +8,7 @@
 </head>
 <body>
 
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyAVOdFJH9Ri8RRgRomAWo6kzSWgx6IVboU",
-      authDomain: "test123-d3ded.firebaseapp.com",
-      projectId: "test123-d3ded",
-      storageBucket: "test123-d3ded.firebasestorage.app",
-      messagingSenderId: "142512964803",
-      appId: "1:142512964803:web:0588bca35d0c31a84ece76",
-      measurementId: "G-CRVP5GLEJM"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
+  <script type="module" src="./data-display.js"></script>
   
   <div class="overview-1">
     <div class="depth-0-frame-0-2">
@@ -52,7 +30,7 @@
               <p class="text-14"><span class="text-white">Fuel Usage (Past Month)</span></p>
             </div>
             <div class="depth-4-frame-1-15">
-              <p class="text-16"><span class="text-white">22 mpg</span></p>
+              <p class="text-16" id="text-16"><span class="text-white">22 mpg</span></p>
             </div>
             <div class="depth-4-frame-2-17">
               <div class="depth-5-frame-0-18">
@@ -111,7 +89,7 @@
               <p class="text-52"><span class="text-white">Total Mileage</span></p>
             </div>
             <div class="depth-4-frame-1-53">
-              <p class="text-54"><span class="text-white">32,000 mi</span></p>
+              <p class="text-54" id="text-23"><span class="text-white">32,000 mi</span></p>
             </div>
           </div>
           <div class="depth-3-frame-1-55">
@@ -119,7 +97,7 @@
               <p class="text-57"><span class="text-white">Avg. Fuel Consumption</span></p>
             </div>
             <div class="depth-4-frame-1-58">
-              <p class="text-59"><span class="text-white">22 mpg</span></p>
+              <p class="text-59" id="text-16"><span class="text-white">22 mpg</span></p>
             </div>
           </div>
           <div class="depth-3-frame-2-60">
@@ -127,7 +105,7 @@
               <p class="text-62"><span class="text-white">Next Maintenance</span></p>
             </div>
             <div class="depth-4-frame-1-63">
-              <p class="text-64"><span class="text-white">08/20/2024</span></p>
+              <p class="text-64" id="text-33"><span class="text-white">08/20/2024</span></p>
             </div>
           </div>
         </div>
