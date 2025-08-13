@@ -56,9 +56,9 @@ onSnapshot(docRef, (docSnap) => {
             maintainanceElement.innerText = displayValue;
         }
         if (connectionElement) {
-            if (connection == true){
-            connectionElement.innerText = "Connected";
-            } else if (connection == false) {
+            if (connection === true) {
+                connectionElement.innerText = "Connected";
+            } else {
                 connectionElement.innerText = "Disconnected";
             }
         }
